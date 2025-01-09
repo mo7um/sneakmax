@@ -36,3 +36,26 @@ html {
     font-size: 16px;
 }
 
+h1 {
+    font-family: IntroRegular;
+    font-size: 2.25rem;
+    text-align: left;
+}
+
+h2 {
+    font-family: IntroBold;
+    font-size: 1.875rem;
+    text-align: left;
+}
+
+h3 {
+    font-family: IntroBook;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+p {
+    font-family: IntroBook;
+    font-size: 1rem;
+    text-align: left;
+}
