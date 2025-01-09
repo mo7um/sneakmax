@@ -15,19 +15,19 @@
 }
 
 @font-face {
-    font-family: 'Intro';
+    font-family: 'IntroRegular';
     src: url(../fonts/Intro-Regular.ttf);
     font-weight: 400;
 }
 
 @font-face {
-    font-family: 'Intro';
+    font-family: 'IntroBold';
     src: url(../fonts/Intro-Bold.ttf);
     font-weight: 700;
 }
 
 @font-face {
-    font-family: 'Intro';
+    font-family: 'IntroBook';
     src: url(../fonts/Intro-Book.ttf);
     font-weight: 400;
 }
