@@ -6,7 +6,7 @@ const CartContainer = styled.div`
     height: fit-content;
     display: flex;
     gap: 10px;
-    background-color: red;
+    cursor: pointer;
 `
 
 const CartIndicator = styled.div`
@@ -26,7 +26,7 @@ const Cart = () => {
         <CartContainer>
             <span>Корзина</span>
             <img src={cartIcon} alt="" />
-            <CartIndicator></CartIndicator>
+            <CartIndicator>{/* Кол-во товаров в корзине */}</CartIndicator>
         </CartContainer>
     );
 };

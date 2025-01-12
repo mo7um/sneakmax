@@ -3,6 +3,7 @@ import Navigation from '../Common/Navigation';
 import Cart from './Cart';
 
 const StyledHeader = styled.header`
+    color: #FFFFFF;
     font-size: 14px;
     width: 1180px;
     height: 44px;
