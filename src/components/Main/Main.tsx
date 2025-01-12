@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Hero from "./Hero/Hero";
 import Catalog from "./Catalog/Catalog";
-
+import About from "./About/About";
 
 const StyledMain = styled.main`
     display: flex;
@@ -15,6 +15,7 @@ const Main = () => {
         <StyledMain>
             <Hero />
             <Catalog />
+            <About />
         </StyledMain>
     )
 }
