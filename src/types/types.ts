@@ -4,3 +4,10 @@ export interface Sneaker {
     name: string;
     price: number;
 }
+
+export interface Member {
+    id: number;
+    image: string;
+    name: string;
+    role: string;
+}
