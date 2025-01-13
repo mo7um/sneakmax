@@ -39,9 +39,9 @@ const Team = () => {
             <Content>
                 <h2>Наша команда</h2>
                 <TeamContainer>
-                    {team.teamMembers.map((member) => {
-                        return <TeamMember key={member.id} data={member} />
-                    })}
+                    {team.teamMembers.map((member) => (
+                        <TeamMember key={member.id} data={member} />
+                    ))}
                 </TeamContainer>
             </Content>
         </Section>

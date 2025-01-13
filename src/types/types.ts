@@ -11,3 +11,9 @@ export interface Member {
     name: string;
     role: string;
 }
+
+export interface Question {
+    id: number;
+    summary: string;
+    description: string;
+}
