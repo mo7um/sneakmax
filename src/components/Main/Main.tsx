@@ -4,6 +4,7 @@ import Catalog from './Catalog/Catalog';
 import About from './About/About';
 import Team from './Team/Team';
 import Faq from './Faq/Faq'
+import Contacts from './Contacts/Contacts';
 
 const StyledMain = styled.main`
     display: flex;
@@ -20,6 +21,7 @@ const Main = () => {
             <About />
             <Team />
             <Faq />
+            <Contacts />
         </StyledMain>
     );
 };

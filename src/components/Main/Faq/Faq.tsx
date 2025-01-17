@@ -4,7 +4,6 @@ import faq from '../../../data/faq.json';
 
 const Section = styled.section`
     width: 1180px;
-    margin-bottom: 500px;
 `;
 const Title = styled.h2`
     color: var(--color-text);

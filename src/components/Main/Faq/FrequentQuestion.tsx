@@ -24,7 +24,7 @@ const Summary = styled.summary`
     }
 
     ${Details}[open] & > img {
-        transform: rotate(135deg);
+        transform: rotate(45deg);
     }
 `;
 const Icon = styled.img`
