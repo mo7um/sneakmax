@@ -36,6 +36,7 @@ const Cite = styled.cite`
     font-style: normal;
     float: right;
     right: -50px;
+    margin-top: 20px;
     position: relative;
 
     &::before {

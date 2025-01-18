@@ -6,6 +6,7 @@ const StyledHeader = styled.header`
     color: #FFFFFF;
     font-size: 14px;
     width: 1180px;
+    margin-top: 20px;
     height: 44px;
     display: flex;
     justify-content: space-between;
@@ -18,6 +19,7 @@ const StyledHeader = styled.header`
 const Menu = styled.div`
     margin-top: 7px;
     display: flex;
+    align-items: flex-start;
     gap: 40px;
 `;
 
