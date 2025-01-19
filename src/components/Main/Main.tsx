@@ -3,8 +3,9 @@ import Hero from './Hero/Hero';
 import Catalog from './Catalog/Catalog';
 import About from './About/About';
 import Team from './Team/Team';
-import Faq from './Faq/Faq'
+import Faq from './Faq/Faq';
 import Contacts from './Contacts/Contacts';
+import Feedback from './Feedback/Feedback';
 
 const StyledMain = styled.main`
     display: flex;
@@ -22,6 +23,7 @@ const Main = () => {
             <Team />
             <Faq />
             <Contacts />
+            <Feedback />
         </StyledMain>
     );
 };
