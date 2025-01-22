@@ -19,7 +19,9 @@ const ProductsContainer = styled.div`
 `;
 
 const Products = () => {
+    const productsPerPage: number = 6;
     const [allSneakers, setAllSneakers] = useState<Sneaker[]>([]);
+    const [visibleCount, setVisibleCount] = useState<number>(productsPerPage); // Количество отображаемых товаров
 
     useEffect(() => {
         const fetchData = async () => {
@@ -40,14 +42,20 @@ const Products = () => {
         fetchData();
     }, []);
 
+    const handleShowMore = () => {
+        setVisibleCount((prevCount) => prevCount + productsPerPage);
+    };
+
     return (
         <ProductsWrapper>
             <ProductsContainer>
-                {allSneakers.map((item) => {
-                    return <Product data={item} key={item.id} />;
-                })}
+                {allSneakers.slice(0, visibleCount).map((item) => (
+                    <Product data={item} key={item.id} />
+                ))}
             </ProductsContainer>
-            <Button>Показать еще</Button>
+            {visibleCount < allSneakers.length && (
+                <Button onClick={handleShowMore}>Показать еще</Button>
+            )}
         </ProductsWrapper>
     );
 };
