@@ -1,5 +1,7 @@
 import styled from 'styled-components';
+import { useState, useEffect } from 'react';
 import Product from './Product';
+import { Sneaker } from '../../../interfaces';
 import Button from '../../Common/Button';
 
 const ProductsWrapper = styled.div`
@@ -17,18 +19,33 @@ const ProductsContainer = styled.div`
 `;
 
 const Products = () => {
+    const [allSneakers, setAllSneakers] = useState<Sneaker[]>([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch('https://3b9cd24286514e4a.mokky.dev/sneakers');
+                const data = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(data.message || 'Something went wrong');
+                }
+
+                setAllSneakers(data);
+            } catch (error) {
+                console.error('Error fetching:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
+
     return (
         <ProductsWrapper>
             <ProductsContainer>
-                <Product data={''}></Product>
-                <Product data={''}></Product>
-                <Product data={''}></Product>
-                <Product data={''}></Product>
-                <Product data={''}></Product>
-                <Product data={''}></Product>
-                <Product data={''}></Product>
-                <Product data={''}></Product>
-                <Product data={''}></Product>
+                {allSneakers.map((item) => {
+                    return <Product data={item} key={item.id} />;
+                })}
             </ProductsContainer>
             <Button>Показать еще</Button>
         </ProductsWrapper>

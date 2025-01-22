@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import plusIcon from '../../../assets/icons/plus.svg';
-import { Question } from '../../../types/types';
+import { Question } from '../../../interfaces';
 
 const Details = styled.details`
     cursor: pointer;

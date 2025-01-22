@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Member } from '../../../types/types';
+import { Member } from '../../../interfaces';
 
 const TeamMemberContainer = styled.article`
     display: flex;
@@ -20,7 +20,7 @@ interface Props {
 const TeamMember: React.FC<Props> = ({ data }) => {
     return (
         <TeamMemberContainer>
-            <Image src={data.image} />
+            <Image src={data.imgUrl} />
             <h3>{data.name}</h3>
             <p>{data.role}</p>
         </TeamMemberContainer>

@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { Sneaker } from '../../../types/types';
+import { Sneaker } from '../../../interfaces';
 import cartIcon from '../../../assets/icons/cart.svg';
 import showIcon from '../../../assets/icons/show.svg';
 
@@ -69,12 +69,9 @@ interface Props {
 const Product: React.FC<Props> = ({ data }) => {
     return (
         <ProductContainer>
-            <Image
-                src="https://s3-alpha-sig.figma.com/img/6a4c/cb73/3d5636cb20ebbdfd22ef229cec9df732?Expires=1737331200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=mj073YV51y0g1oh6-EpV~lgbdD1QM-LE0eDkhA-mcw-O23OrmSSGIuoVdYX-3-vay2DN8eYLJMPLMbD2uIfHko1AraVfbGN4NvIsTC-bALexgeFYrooqWMEdliLRrNEtr4fk0qA-FYrUQHajqZES1qGY4y7pwZKnaaorXl91OAVyhzEhgtEbWmhbtiKD1m2oB-yDLEehULcx2pthLx6ddRbDbovw1pi6PX3KMFgBapcMWVFu3H7mLoE-euMJKRSAz8CFzJnayN01CZ~0JJkelWwDGK4ZPxfLI4VGNozWod~6JG67ek1YrVgx58le2Xgg~CUgCknDZWBsiloHrWzw6A__"
-                alt="Фото товара"
-            />
-            <Name>Название кроссовок {data.name}</Name>
-            <Price>100h {data.price}</Price>
+            <Image src={data.imgUrl} alt="Фото товара" />
+            <Name>{data.title}</Name>
+            <Price>{data.price} р</Price>
             <Overlay>
                 <ShowProduct>
                     <img src={showIcon} alt="" />
